@@ -1,5 +1,7 @@
-// Small starter word lists (lowercase, 5 letters). Can be expanded later.
+// Word lists for Wordle game (lowercase, 5 letters)
+import { VALID_GUESSES } from './valid-guesses'
 
+// Curated list of possible daily answers (75 words)
 export const ANSWERS: readonly string[] = [
   'cigar',
   'rebut',
@@ -78,5 +80,6 @@ export const ANSWERS: readonly string[] = [
   'delta',
 ]
 
-export const ALLOWED_GUESSES: ReadonlySet<string> = new Set(ANSWERS)
+// All valid guesses: includes both possible answers and additional allowed words (12,970 total)
+export const ALLOWED_GUESSES: ReadonlySet<string> = new Set(VALID_GUESSES)
 
